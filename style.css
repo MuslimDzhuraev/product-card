@@ -1,80 +1,85 @@
-body {
-  font-family: Arial, sans-serif;
-  font-size: 13px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.products {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.main-title {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  color: #515076;
+  margin-top: 220px;
+  margin-bottom: 80px;
+}
+
+.grid-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 80px;
 }
 
-.products-list {
+.grid-container .product-card:nth-child(-n + 3) {
   width: 340px;
-  height: 570px;
-  background-color: #F5F5F5;
-  list-style: none;
+  flex-grow: 0;
+}
+
+.grid-container .product-card:nth-child(n + 4) {
+  width: 340px;
+  flex-grow: 0;
+}
+
+.product-card {
+  width: 340px;
+  height: auto;
   padding: 25px;
-  margin: 10px;
+  background-color: #f7f7fa;
+}
+
+.product-header {
   display: flex;
   flex-direction: column;
-}
-
-.title {
-  font-size: 60px;
-  font-weight: 400;
-  line-height: 78px;
-  margin: 0;
-  text-align: center;
-  color: #515076;
-}
-
-.description {
-  font-size: 13px;
-  line-height: 18px;
-  color: #515076;
+  gap: 5px;
+  margin-top: 20px;
   margin-bottom: 15px;
-  margin-top: 0;
 }
-
-.purple-text {
-  font-size: 13px;
-  line-height: 18px;
-  color: #515076;
-}
-
-ul.purple-text {
-  padding-left: 25px;
+.product-compound {
+  margin-left: 0px;
+  padding-left: 0px;
+  list-style-position: inside;
   margin-bottom: 25px;
 }
 
-.for-skin {
-  font-size: 12px;
-  line-height: 24px;
-  color: #A5A3B9;
-  margin-bottom: 5px;
-}
-
-.headline {
-  font-size: 20px;
-  line-height: 27px;
-  color: #515076;
-  font-weight: 700;
-  margin-bottom: 5px;
-  margin-top: 0;
-}
-
-.price {
-  font-size: 20px;
-  line-height: 24px;
-  color: #515076;
-}
-
-.image {
+.product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
   width: 100%;
-  height: auto;
-  margin-bottom: 30px;
+}
+
+.product-price .price-label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #36365d;
+}
+
+.product-price .price-value {
+  font-size: 20px;
+  font-weight: 400;
+  color: #36365d;
+}
+
+body {
+  background-image: url("img/bg1.png");
+  background-size: auto;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
