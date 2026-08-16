@@ -4,7 +4,20 @@
   box-sizing: border-box;
 }
 
-.main-title {
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-image: url("img/bg1.png");
+  background-size: auto;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.page__title {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: 70px;
@@ -12,9 +25,10 @@
   color: #515076;
   margin-top: 220px;
   margin-bottom: 80px;
+  width: 100%; /* чтобы заголовок занимал всю ширину */
 }
 
-.grid-container {
+.page {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -25,21 +39,19 @@
   padding-bottom: 80px;
 }
 
-.grid-container .product-card:nth-child(-n + 3) {
-  width: 340px;
-  flex-grow: 0;
-}
-
-.grid-container .product-card:nth-child(n + 4) {
-  width: 340px;
-  flex-grow: 0;
-}
-
 .product-card {
-  width: 340px;
+  width: 340px; /* теперь все карточки имеют эту ширину */
   height: auto;
   padding: 25px;
   background-color: #f7f7fa;
+  display: flex;
+  flex-direction: column; /* чтобы элементы внутри тянулись по вертикали */
+}
+
+.product-card__image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .product-header {
@@ -49,37 +61,33 @@
   margin-top: 20px;
   margin-bottom: 15px;
 }
-.product-compound {
-  margin-left: 0px;
-  padding-left: 0px;
-  list-style-position: inside;
+
+.composition {
   margin-bottom: 25px;
 }
 
-.product-price {
+.composition__list {
+  list-style-position: inside;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.price {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto;
+  margin-top: auto; /* прижимает цену к низу карточки */
   width: 100%;
 }
 
-.product-price .price-label {
+.price__label {
   font-size: 20px;
   font-weight: 700;
   color: #36365d;
 }
 
-.product-price .price-value {
+.price__value {
   font-size: 20px;
   font-weight: 400;
   color: #36365d;
-}
-
-body {
-  background-image: url("img/bg1.png");
-  background-size: auto;
-  background-position: left top;
-  background-repeat: no-repeat;
-  min-height: 100vh;
 }
