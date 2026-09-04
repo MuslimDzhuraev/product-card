@@ -36,11 +36,9 @@ addMaxSpeed(myCar);
 console.log(myCar);
 
 function getProperty(obj, prop) {
-  console.log(obj[prop]);
+  return obj[prop];
 }
-
-getProperty(myCar, "brand");
-
+console.log(getProperty(myCar,"brand"))
 const products = [
   "banana",
   "apple",
