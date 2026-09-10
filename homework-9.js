@@ -11,6 +11,7 @@ import { comments } from "./comments.js";
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const filtered = numbers.filter((num) => num >= 5);
+
 console.log(filtered);
 
 const movies = [
@@ -20,10 +21,10 @@ const movies = [
   "Harry-Potter",
   "Kingdom of Narnia",
 ];
+
 function checkMovieExists(movieName) {
   if (typeof movieName !== "string") {
-    console.error("Некорректные входные параметры: ожидается строка");
-    return false;
+    return "Некорректные входные параметры: ожидается строка";
   }
   return movies.includes(movieName);
 }
@@ -36,7 +37,7 @@ console.log(
 );
 
 function reverseArray(arr) {
-  return arr.reverse();
+  return [...arr].reverse();
 }
 
 const reversedNumbers = reverseArray(numbers);
@@ -59,9 +60,11 @@ function filterCommentsByDomain(commentsArray, domain) {
 }
 
 const filteredByCom = filterCommentsByDomain(comments, ".com");
+
 console.log("Задание 7 (функция, .com):", filteredByCom);
 
 const filteredByBiz = filterCommentsByDomain(comments, ".biz");
+
 console.log("Задание 7 (функция, .biz):", filteredByBiz);
 console.log(
   "Задание 7 (функция, не массив):",
@@ -72,9 +75,11 @@ console.log(
   filterCommentsByDomain(comments, 123),
 );
 
-const updatedComments = comments.map((comment) =>
-  comment.id <= 5 ? { ...comment, postId: 2 } : { ...comment, postId: 1 },
-);
+const updatedComments = comments.map((comment) => ({
+  ...comment,
+  postId: comment.id < 5 ? 2 : 1,
+}));
+
 console.log(updatedComments);
 
 const simplifiedComments = comments.map((comment) => {
@@ -101,12 +106,15 @@ const emailsWithReduce = comments.reduce((accumulator, currentComment) => {
 }, []);
 
 const emailsWithMap = comments.map((comment) => comment.email);
+
 console.log(emailsWithMap);
 console.log(emailsWithReduce);
 
 const emails = emailsWithMap;
 const emailsString1 = emails.toString();
+
 console.log(emailsString1);
 
 const emailsString2 = emails.join("; ");
+
 console.log(emailsString2);
