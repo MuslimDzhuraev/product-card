@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
   gap: 20px;
   background-image: url("img/bg 1.png");
   background-size: auto;
