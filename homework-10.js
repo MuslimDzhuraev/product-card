@@ -1,5 +1,7 @@
 import { products } from "./products.js";
 
+const IMAGE_BASE_PATH = "img/";
+
 function createCardTemplate(product) {
   const compositionHTML = product.composition
     .map((item) => `<li class="composition__item">${item}</li>`)
@@ -9,7 +11,7 @@ function createCardTemplate(product) {
 
   return `
     <div class="product-card">
-      <img class="product-card__image" src="${product.image}" alt="${product.alt}" />
+      <img class="product-card__image" src="${IMAGE_BASE_PATH}${product.image}" alt="${product.alt}" />
       <div class="product-header">
         <p class="product-card__category">${product.category}</p>
         <h2 class="product-card__name">${product.name}</h2>

@@ -10,7 +10,7 @@ export const products = [
       "солнцезащитные компоненты",
     ],
     price: 2750,
-    image: "img/photo1.png",
+    image: "photo1.png",
     alt: "Mousse",
   },
   {
@@ -20,7 +20,7 @@ export const products = [
     description: "Способствует удерживанию влаги в верхних слоях кожи.",
     composition: ["воски", "минералы", "масла"],
     price: 3500,
-    image: "img/photo2.png",
+    image: "photo2.png",
     alt: "Маска",
   },
   {
@@ -34,7 +34,7 @@ export const products = [
       "солнцезащитные компоненты",
     ],
     price: 1650,
-    image: "img/photo3.png",
+    image: "photo3.png",
     alt: "Гель",
   },
   {
@@ -44,7 +44,7 @@ export const products = [
     description: "Набор, состоящий из увлажняющего крема и маски.",
     composition: ["воски", "минералы", "масла"],
     price: 4750,
-    image: "img/photo4.png",
+    image: "photo4.png",
     alt: "Набор 1",
   },
   {
@@ -55,7 +55,7 @@ export const products = [
       "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.",
     composition: ["воски", "минералы", "масла"],
     price: 7520,
-    image: "img/photo5.png",
+    image: "photo5.png",
     alt: "Набор 5",
   },
 ];
