@@ -45,7 +45,7 @@ function askCardsCount() {
 
   if (!Number.isInteger(count) || count < 1 || count > 5) {
     alert("Нужно ввести целое число от 1 до 5");
-    return askCardsCount(); // переспросить
+    return askCardsCount();
   }
 
   return count;
@@ -53,7 +53,7 @@ function askCardsCount() {
 
 function renderCards(list) {
   const container = document.querySelector(".page");
-  container.innerHTML = ""; // очистим на всякий случай
+  container.innerHTML = "";
   container.insertAdjacentHTML(
     "beforeend",
     list.map(createCardTemplate).join(""),

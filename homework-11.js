@@ -10,21 +10,21 @@ form.addEventListener("submit", function (event) {
   console.log({ email: email });
 });
 
-const modal = document.getElementById('modal');
-const openModalBtn = document.getElementById('open-modal-btn');
-const closeModalBtn = document.getElementById('close-modal-btn');
-const overlay = document.querySelector('.overlay');
+const modal = document.getElementById("modal");
+const openModalBtn = document.getElementById("open-modal-btn");
+const closeModalBtn = document.getElementById("close-modal-btn");
+const overlay = document.querySelector(".overlay");
 
-openModalBtn.addEventListener('click', function () {
-  modal.classList.add('modal-showed');
+openModalBtn.addEventListener("click", function () {
+  modal.classList.add("modal-showed");
 });
 
-closeModalBtn.addEventListener('click', function () {
-  modal.classList.remove('modal-showed');
+closeModalBtn.addEventListener("click", function () {
+  modal.classList.remove("modal-showed");
 });
 
-overlay.addEventListener('click', function () {
-  modal.classList.remove('modal-showed');
+overlay.addEventListener("click", function () {
+  modal.classList.remove("modal-showed");
 });
 
 const registerForm = document.getElementById("register-form");
