@@ -7,8 +7,156 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <button class="register-btn" id="open-modal-btn">Регистрация</button>
+
     <h1 class="page__title">Выбери свой продукт</h1>
     <div class="page"></div>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__info">
+          <h3 class="footer__title">Product Cards</h3>
+          <p class="footer__subtitle">У нас Самые Лучшие Продукты Для Кожи!</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link">
+              <img src="img/telegram.png" alt="Telegram" />
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="img/vk.png" alt="Вконтакте" />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__subscribe">
+          <label for="email-input" class="footer__subscribe-label">
+            Подпишись на наши акции:
+          </label>
+          <form class="footer__form" id="subscribe-form">
+            <input
+              type="email"
+              id="email-input"
+              name="email"
+              class="footer__input"
+              placeholder="Введи Email..."
+              required
+              autocomplete="email"
+            />
+            <button type="submit" class="footer__button">Подписаться</button>
+          </form>
+        </div>
+
+        <nav class="footer__nav">
+          <h3 class="footer__nav-title">Быстрые ссылки</h3>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Главная</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Магазин</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <hr class="footer__divider" />
+        <p class="footer__copyright">
+          <small>www.product-cards.com © all right reserve</small>
+        </p>
+      </div>
+    </footer>
+
+    <div class="modal" id="modal">
+      <div class="overlay"></div>
+      <div class="modal__content">
+        <button class="modal__close" id="close-modal-btn">✕</button>
+        <h2 class="modal__title">Регистрация</h2>
+
+        <form class="modal__form" id="register-form" novalidate>
+          <div class="modal__field">
+            <label for="name" class="modal__label">Имя</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="modal__input"
+              placeholder="Введите имя"
+              required
+            />
+          </div>
+
+          <div class="modal__field">
+            <label for="surname" class="modal__label">Фамилия</label>
+            <input
+              type="text"
+              id="surname"
+              name="surname"
+              class="modal__input"
+              placeholder="Введите фамилию"
+              required
+            />
+          </div>
+
+          <div class="modal__field">
+            <label for="birth-date" class="modal__label">Дата рождения</label>
+            <input
+              type="date"
+              id="birth-date"
+              name="birthDate"
+              class="modal__input"
+              required
+            />
+          </div>
+
+          <div class="modal__field">
+            <label for="login" class="modal__label">Логин</label>
+            <input
+              type="text"
+              id="login"
+              name="login"
+              class="modal__input"
+              placeholder="Придумайте логин"
+              required
+            />
+          </div>
+
+          <div class="modal__field">
+            <label for="password" class="modal__label">Пароль</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="modal__input"
+              placeholder="Минимум 6 символов"
+              minlength="6"
+              required
+            />
+          </div>
+
+          <div class="modal__field">
+            <label for="confirm-password" class="modal__label"
+              >Повтор пароля</label
+            >
+
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirmPassword"
+              class="modal__input"
+              placeholder="Повторите пароль"
+              minlength="6"
+              required
+            />
+          </div>
+          <button type="submit" class="modal__submit">
+            Зарегистрироваться
+          </button>
+        </form>
+      </div>
+    </div>
     <script type="module" src="homework-10.js"></script>
+    <script src="homework-11.js"></script>
   </body>
 </html>
