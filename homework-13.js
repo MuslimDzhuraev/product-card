@@ -1,7 +1,4 @@
 class Drink {
-  name;
-  size;
-  price;
   #temperature;
 
   constructor(name, size, price) {
@@ -49,8 +46,6 @@ class Drink {
 }
 
 class Coffee extends Drink {
-  beanType;
-  milkType;
   constructor(name, size, price, beanType, milkType) {
     super(name, size, price);
     this.beanType = beanType;
@@ -66,8 +61,6 @@ class Coffee extends Drink {
 }
 
 class Tea extends Drink {
-  sort;
-  syrup;
   constructor(name, size, price, sort, syrup) {
     super(name, size, price);
     this.sort = sort;
@@ -84,8 +77,6 @@ class Tea extends Drink {
 }
 
 class Lemonade extends Drink {
-  flavor;
-  isSparkling;
   constructor(name, size, price, flavor, isSparkling) {
     super(name, size, price);
     this.flavor = flavor;
@@ -102,8 +93,6 @@ class Lemonade extends Drink {
 }
 
 class Cafe {
-  name;
-  location;
   constructor(name, location) {
     this.name = name;
     this.location = location;
