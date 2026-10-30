@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Муслим",
+    "surname": "Джураев",
+    "email": "mdzuraev.ccm@gmail.com",
+    "age": 31
+  },
+  {
+    "id": 2,
+    "name": "Яхё",
+    "surname": "Джураев",
+    "email": "mdzhuraev.ccm@gmail.com",
+    "age": 6
+  },
+  {
+    "id": 3,
+    "name": "Юсуф",
+    "surname": "Джураев",
+    "email": "mdzhuraev@gmail.com",
+    "age": 4
+  },
+  {
+    "id": 4,
+    "name": "Умар",
+    "surname": "Алиев",
+    "email": "dzuraev.ccm@gmail.com",
+    "age": 28
+  },
+  {
+    "id": 5,
+    "name": "Абу Бакр",
+    "surname": "Умаров",
+    "email": "umarov.dev@gmail.com",
+    "age": 25
+  }
+]
